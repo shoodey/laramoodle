@@ -1,27 +1,90 @@
-## Laravel PHP Framework
+LaraMoodle
+===================
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Système d'archivage de fichier pour l'[Université Internationale de Rabat](http://www.uir.ac.ma), sous Laravel 5.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+----------
 
-## Official Documentation
+<i class="icon-user"></i>Auteur
+-------------
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Shoodey: <i class="icon-twitter"></i>[Twitter](https://twitter.com/mrshoodey) - [Facebook](https://facebook.com/mrshoodey) - [Mail](mailto:shoodey@gmail.com)
 
-## Contributing
+----------
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+<i class="icon-cog"></i>Installation
+-------------
 
-## Security Vulnerabilities
+> 1. Téléchargez le zip sur ce [lien](https://github.com/Shoodey/LaraMoodle/zipball/master).
+> 2. Dézippez le dans `wamp/www/` et renommez le en `LaraMoodle`.
+> 3. Créez une base de donnée `laramoodle`.
+> 4. Lancez votre terminal puis `cd wamp/www/LaraMoodle`.
+> 5. Tapez `php artisan migrate`.
+> 6. Rendez vous dans :
+> `localhost/laramoodle/public/auth/register`.
+> 7. Créez un compte et testez !
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+> **Note:** La liste des liens accessibles figure dans les tâches complétées.
 
-### License
+----------
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+<i class="icon-check"></i>Tâches complétées 
+-------------------------------
+
+[08/06] Liste des tâches complétées :
+
+> **Utilisateurs:**
+
+> - Inscription avec : Username, Email, Password. 
+> `(/public/auth/register)`
+> - Connection avec le couple : Email, Password.
+> `(/public/auth/login)`
+> - Récupération de mot de passe par envoi de mail.
+> `(/public/password/email)`
+> - Changement de mot de passe par token.
+> `(/public/password/reset/$token)`
+
+> **Pôles:**
+
+> - Listage des pôles avec : ID, Name, Administrateur, Nombre d'appartenant, Actions.
+> `(/public/poles)`
+> - Ajout de pôle avec choix de : Name, Administrateur.
+> `(/public/poles/create)`
+> - Edition de pôle limité à l'administrateur du pôle en question.
+> `(/public/poles/$id/edit)`
+> - Suppression de pôle limitée à l'administrateur du pôle en question.
+> - Profile du pôle avec : Avatar, Informations, Liste des utilisateurs appartenant au pôle.
+> `(/public/poles/$id)`
+
+----------
+
+<i class="icon-clock"></i>Tâches à réaliser
+-------------
+
+Liste des tâches à réaliser (non exhaustive) :
+
+> **Utilisateurs:**
+
+> - Système de permissions.
+> - Profile des utilisateurs : Avatar, A propos, CV, etc...
+
+> **Pôles:**
+
+> - Upload d'avatar.
+> - Ajout d'informations : A propos, date de création, nombre d'étudiants...
+> - Associer des professeurs (user.rank == teacher) à un pôle.
+
+> **Modules:**
+
+> - Permettre aux professeurs de créer/éditer des modules au sein d'un pôle avec système d'ownership.
+> - Attribuer plus d'un professeur à un module.
+
+> **Cours:**
+
+>- Ajout de cours au seins des modules par des professeurs.
+
+
+> **Fichiers:**
+
+> - Upload de fichiers au sein d'un cours par des professeurs.
