@@ -1,7 +1,6 @@
 LaraMoodle
 ===================
 
-
 Système d'archivage de fichier pour l'[Université Internationale de Rabat](http://www.uir.ac.ma), sous Laravel 5.
 
 ----------
