@@ -19,10 +19,10 @@ Shoodey: <i class="icon-twitter"></i>[Twitter](https://twitter.com/mrshoodey) - 
 > 2. Dézippez le dans `wamp/www/` et renommez le en `LaraMoodle`.
 > 3. Créez une base de donnée `laramoodle`.
 > 4. Lancez votre terminal puis `cd wamp/www/LaraMoodle`.
-> 5. Tapez `php artisan migrate`.
-> 6. Rendez vous dans :
-> `localhost/laramoodle/public/auth/register`.
-> 7. Créez un compte et testez !
+> 5. Tapez `php composer install`.
+> 6. Tapez `php artisan migrate`.
+> 7. Rendez vous dans : `localhost/laramoodle/public/auth/register`.
+> 8. Créez un compte et testez !
 
 > **Note:** La liste des liens accessibles figure dans les tâches complétées.
 
