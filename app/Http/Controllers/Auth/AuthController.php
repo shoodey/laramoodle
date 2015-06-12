@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+    protected $redirectTo = '/';
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -25,7 +27,6 @@ class AuthController extends Controller
     /**
      * Create a new authentication controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
