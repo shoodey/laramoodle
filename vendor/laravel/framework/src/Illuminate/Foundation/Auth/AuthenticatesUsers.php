@@ -34,7 +34,7 @@ trait AuthenticatesUsers
         $credentials = $this->getCredentials($request);
 
         if (Auth::attempt($credentials, $request->has('remember'))) {
-            return redirect()->intended($this->redirectPath());
+            return redirect()->intended($this->redirectPath())->with('success', 'Vous êtes maintenant connecté.');
         }
 
         return redirect($this->loginPath())
@@ -74,7 +74,7 @@ trait AuthenticatesUsers
     {
         Auth::logout();
 
-        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
+        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')->with('success', 'Vous êtes maintenant déconnecté.');
     }
 
     /**

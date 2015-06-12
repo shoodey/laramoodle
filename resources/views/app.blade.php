@@ -33,8 +33,11 @@
                             <li><a href="{{ url('/auth/login') }}">Se connecter</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->username }} <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
+                                    @if(Auth::user()->hasRank('admin'))
+                                        <li><a href="{{ url('/admin') }}">Administration</a></li>
+                                    @endif
                                     <li><a href="{{ url('/auth/logout') }}">Se déconnecter</a></li>
                                 </ul>
                             </li>
