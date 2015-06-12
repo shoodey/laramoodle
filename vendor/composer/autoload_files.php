@@ -7,11 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
-    $vendorDir . '/nikic/php-parser/lib/bootstrap.php',
     $vendorDir . '/symfony/var-dumper/Resources/functions/dump.php',
+    $vendorDir . '/nikic/php-parser/lib/bootstrap.php',
     $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
     $vendorDir . '/psy/psysh/src/Psy/functions.php',
     $vendorDir . '/danielstjules/stringy/src/Create.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php',
+    $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
 );
