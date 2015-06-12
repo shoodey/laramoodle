@@ -17,9 +17,7 @@
                     {!! BootForm::open() !!}
                     {!! BootForm::email('Adresse Email', 'email') !!}
                     {!! BootForm::password('Mot de passe', 'password') !!}
-                    {!! BootForm::checkbox('Se souvenir de moi', 'remember')->labelClass('pull-left') !!}
-                    <a href="{{ url('password/email') }}" class="btn btn-link pull-right">Mot de passe oublié ?</a>
-                    <div class="cb"></div>
+                    {!! BootForm::checkbox('Se souvenir de moi', 'remember') !!}
                     {!! BootForm::submit('Se connecter')->addClass('btn-primary center-block') !!}
                     {!! BootForm::close() !!}
                 </div>

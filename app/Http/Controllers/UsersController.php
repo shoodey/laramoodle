@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,27 +17,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
-     */
-    public function store()
-    {
-        //
+        $users = User::get();
+        return view('users.admin.index', compact('users'));
     }
 
     /**
@@ -58,18 +40,23 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('users.admin.edit', compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param  int $id
+     * @param Request $request
      * @return Response
      */
-    public function update($id)
+    public function update($id, Request $request)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->update($request->only('name','email', 'rank'));
+        return redirect(route('admin.users.index'))->with('success', 'L\'utilisateur a bien été mis à jour.');
+
     }
 
     /**
@@ -80,6 +67,8 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect(route('admin.users.index'))->with('success', 'L\'utilisateur a bien été supprimé.');
     }
 }
