@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>LaraMoodle @yield('title')</title>
-
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/paper/bootstrap.min.css" rel="stylesheet">
     </head>
 
@@ -35,8 +34,8 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    @if(Auth::user()->hasRank('admin'))
-                                        <li><a href="{{ url('/admin') }}">Administration</a></li>
+                                    @if(Auth::user()->rank === 'admin')
+                                        <li><a href="{{ route('dashboard') }}">Administration</a></li>
                                     @endif
                                     <li><a href="{{ url('/auth/logout') }}">Se déconnecter</a></li>
                                 </ul>
@@ -53,9 +52,6 @@
             @yield('content')
         </div>
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </body>

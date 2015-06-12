@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class RedirectIfAuthenticated
+class Admin
 {
     /**
      * The Guard implementation.
@@ -33,8 +33,12 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next)
     {
-        if ($this->auth->check()) {
-            return redirect('/');
+        if ($this->auth->user()->rank != 'admin') {
+            if ($request->ajax()) {
+                return response('Unauthorized.', 401);
+            } else {
+                return redirect('/')->with('error', 'Vous ne possédez pas les permissions suffisantes pour accéder à cette page.');;
+            }
         }
 
         return $next($request);
