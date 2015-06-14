@@ -1,0 +1,32 @@
+<?php $__env->startSection('title', 'Se connecter'); ?>
+
+<?php $__env->startSection('content'); ?>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1 class="page-header">Se connecter</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading"></div>
+                <div class="panel-body">
+                    <?php echo BootForm::open(); ?>
+
+                    <?php echo BootForm::email('Adresse Email', 'email'); ?>
+
+                    <?php echo BootForm::password('Mot de passe', 'password'); ?>
+
+                    <?php echo BootForm::checkbox('Se souvenir de moi', 'remember'); ?>
+
+                    <?php echo BootForm::submit('Se connecter')->addClass('btn-primary center-block'); ?>
+
+                    <?php echo BootForm::close(); ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

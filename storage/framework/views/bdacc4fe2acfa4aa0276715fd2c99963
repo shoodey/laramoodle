@@ -1,0 +1,18 @@
+<?php $__env->startSection('title', '- Utilisateurs'); ?>
+
+<?php $__env->startSection('content'); ?>
+    <h1 class="page-header">Editer un utilisateur</h1>
+    <?php echo BootForm::open()->put()->action(route('admin.users.update', $user)); ?>
+
+        <?php echo BootForm::text('Nom', 'name')->value($user->name); ?>
+
+        <?php echo BootForm::email('Adresse Email', 'email')->value($user->email); ?>
+
+        <?php echo BootForm::select('Rang', 'rank')->options(['admin' => 'Administrateur', 'user' => 'Utilisateur'])->select($user->rank); ?>
+
+        <?php echo BootForm::submit('Enregistrer')->addClass('btn-primary pull-right'); ?>
+
+    <?php echo BootForm::close(); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
