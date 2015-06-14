@@ -1,14 +1,22 @@
 LaraMoodle
 ===================
 
-Système d'archivage de fichier pour l'[Université Internationale de Rabat](http://www.uir.ac.ma), sous Laravel 5.1
+Système d'archivage pour l'[Université Internationale de Rabat](http://www.uir.ac.ma), sous Laravel 5.1
 
 ----------
 
-<i class="icon-user"></i>Auteur
+<i class="icon-user"></i>L'équipe
 -------------
 
-Shoodey: <i class="icon-twitter"></i>[Twitter](https://twitter.com/mrshoodey) - [Facebook](https://facebook.com/mrshoodey) - [Mail](mailto:shoodey@gmail.com)
+|      Name     |        Role     |      Twitter    |
+| ------------- | --------------- | --------------- |
+| ADEL Zainab  	| Chef de projet  | @               |
+| AMMINE Bassma | Développeur     | @AmmineAmn      |
+| EL AMRI Ali  	| Développeur     | @MrShoodey      |
+| EL AMRI Hadia | Développeur     | @scramettehaidy |
+| KARBAL Basma  | Développeur     | @BasmaKarbal    |
+| MESBAH Hind   | Développeur     | @ 				|
+
 
 ----------
 
