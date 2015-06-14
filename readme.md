@@ -87,3 +87,5 @@ Liste des tâches à réaliser (non exhaustive) :
 > **Fichiers:**
 
 > - Upload de fichiers au sein d'un cours par des professeurs.
+
+----------
